@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <title>ES6</title>
+  </head>
+<body>
+    <script>
+       
+        let x = 5 
+        if (x == 5){
+            let x = 10
+            document.write(x + "<br>");
+        }   
+
+        document.write(x + "<br>") ;
+         
+        var y = 15
+        if (y == 15){
+            var y = 20
+            document.write(y + "<br>");
+        }   
+
+        document.write(y + "<br>") ;
+          
+        function nhân(a,b=1){
+            return a*b;
+        }
+        document.write(nhân(3,4) + "<br>");
+            
+        document.write(nhân(3) + "<br>");
+           
+        const oldArray = [1, 2, 3];
+        const newArray = [...oldArray, 4, 5];
+        document.write(newArray  + "<br>");
+            
+        function number(num1, num2, ...numOther){
+        document.write("x:", num1 + "<br>"); 
+        document.write("y:", num2 + "<br>");
+        document.write("Other number:", numOther + "<br>");
+        }
+        number("one", "two", "three", "four", "five", "six");
+        
+        const array = [1, 2, 3];
+        const [a, b] = array;
+        document.write(a + "<br>"); 
+        document.write(b + "<br>"); 
+        document.write(array + "<br>"); 
+
+     
+        var member = (name, age) => {
+            document.write(name, age + "<br>");
+        }
+        member("Dương Văn Ninh", 4); 
+
+        class Member {
+            constructor() {
+                this.name = "Dương Văn Ninh";
+            }
+                // sd method
+            memberName() {
+                return this.name;
+            }
+        }
+                // tính kế thừa
+        class User extends Member {
+            constructor(name, age) {
+                super(name);
+                this.age = 4;
+            }
+
+            memberInfo() {
+                return this.memberName() + 'Tuổi:' + this.age;
+            }
+        }
+            var m = new User();
+            document.write(m.memberInfo()); 
+               
+    </script>
+</body>
