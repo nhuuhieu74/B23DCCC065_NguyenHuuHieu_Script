@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .hide {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h3>UDU</h3>
+        <div>Sinh viên UDU năng động sáng tạo.</div>
+    </div>
+    <button id="btnThayDoi" type="button">Thay đổi</button>
+
+    <script>
+        $(document).ready(function() {
+            $('button').click(function() {
+                var display = $('#content').html();
+                if (display.includes("Sinh viên UDU năng động sáng tạo.")) {
+                    $("#content").html('<h3>UDU</h3><div>UDU students are dynamic and creative !!!</div>');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+<div class="hide" id="content">
+    <h3>UDU</h3>
+    <div>Sinh viên UDU năng động sáng tạo.</div>
+  </div>
+

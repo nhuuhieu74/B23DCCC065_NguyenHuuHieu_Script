@@ -1,0 +1,99 @@
+<!-- MSV : B23DCCC065
+    Tên : Nguyễn Hữu Hiếu
+    Đề 01
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;"> Calculator Programme written with JS </h1>
+    <form>
+        <input type="text" id="display"> <br>
+        <input type="button" onclick="Sum()"> + </input>
+        <input type="button" onclick="Subtract()"> - </input>
+        <input type="button" onclick="Multiply()"> x </input>
+        <input type="button" onclick="Divide()"> / </input>
+        <br>
+
+
+        <input type="button" onclick="addtoDisplay('1')"> 1 </input>
+        <input type="button" onclick="addtoDisplay('2')"> 2 </input>
+        <input type="button" onclick="addtoDisplay('3')"> 3 </input>
+        <input type="button" onclick="Reset()"> Reset </input>
+
+        <br> 
+
+        <button type="button" onclick="addtoDisplay('4')"> 4 </input>
+        <button type="button" onclick="addtoDisplay('5')"> 5 </input>
+        <button type="button" onclick="addtoDisplay('6')"> 6 </input>
+        <input type="button" onclick="calculation()"> = </input>
+        <br>
+
+        <button type="button" onclick="addtoDisplay('7')"> 7 </input>
+        <button type="button" onclick="addtoDisplay('8')"> 8 </input>
+        <button type="button" onclick="addtoDisplay('9')"> 9 </input>
+        <button type="button" onclick="addtoDisplay('0')"> 0 </button>
+        <br> 
+    </form>
+</body>
+</html>
+
+
+    <script>
+
+    function addtoDisplay() {
+        document.getElementById('display').value += value;
+    }
+
+    function calculation() {
+        let result = document.getElementById('display').value;
+        try {
+            let result1 = eval(result);
+            document.getElementById('display').value = result1;
+        } catch (error) {
+            document.getElementById('display').value = "Error";
+        }
+    }
+
+    function Sum() {
+        let input1 = document.getElementbyID('input1').value;
+        let input2 = document.getElementById('input2').value;
+        let result = input1 + input2;
+        document.getElementById('result').innerText = result;
+    }
+
+    function Subtract() {
+        let input1 = document.getElementById('input1').value;
+        let input2 = document.getElementById('input2').value;
+        let result = input1 - input2;
+        document.getElementById('result').innerText = result;
+    }
+
+    function Multiply() {
+        let input1 = document.getElementById('input1').value;
+        let input2 = document.getElementById('input2').value;
+        let result = input1 * input2;
+        document.getElementById('result').innerText = result;
+    }
+
+    function Divide() {
+        let input = document.getElementById('input1').value;
+        let input2 = document.getElementById('input2').value;
+        let result = input1 / input2;
+        document.getElementById('result').innerText = result;
+    }
+
+    function Reset() {
+        let input1 = document.getElementById('input1').value = "";
+        let input2 = document.getElementById('input2').value = "";
+        document.getElementById('result').innerText = "";
+
+    }
+
+    </script>
+

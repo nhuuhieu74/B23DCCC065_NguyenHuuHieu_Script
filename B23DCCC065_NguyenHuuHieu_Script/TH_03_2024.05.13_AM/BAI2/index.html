@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('button').click(function(){
+        input = $("#inputItem").val();
+        if (input !== "") {
+            $("#list").append("<li>" + input + "</li>");
+            $("#inputItem").val(""); 
+        }
+    });
+});
+</script>
+</head>
+<body>
+
+<input type="text" id="inputItem" placeholder="New Item">
+<button>Add</button>
+
+<ul id="list"></ul>
+
+</body>
+</html>

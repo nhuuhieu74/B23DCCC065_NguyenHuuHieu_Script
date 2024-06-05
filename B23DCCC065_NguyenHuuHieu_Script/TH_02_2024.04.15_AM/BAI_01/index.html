@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function randomArray(length, min, max) {
+            let arr =[];
+            for (let i = 0; i < length; i++) {
+                arr.push(Math.floor(Math.random() * (max - min +1 )) + min);
+            }
+
+            return arr;
+        }
+
+        function sortArray(arr) {
+            return arr.sort((a,b) => a - b);
+        }
+
+        function removeDuplicate(arr) {
+            return arr.filter((item,
+                index) => arr.indexOf(item) === index);
+        }
+
+        let array = randomArray(10, 1, 100);
+        
+        let sortedArray = sortArray(array);
+        console.log("Mảng sắp xếp là : ", sortedArray);
+
+        let duplicated = removeDuplicate(sortedArray);
+        console.log("Mảng bỏ phần tử trùng nhau là : ", duplicated);
+
+    </script>
+</body>
+</html>

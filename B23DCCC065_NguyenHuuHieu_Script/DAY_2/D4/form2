@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clr{
+            color:darkcyan;
+        }
+        body {
+            background-color:floralwhite;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Create account</h1>
+    <form>
+        <table style="with:100%">
+            <tr>
+                <td style="width:50%">
+
+        <label class="clr" for="fname">First name*</label> <br>
+        <input type="text" required> <br>
+        </td>
+
+        <td style="width:50%">
+
+        <label class="clr" for="lname">Last name</label> <br>
+        <input type="text"> <br>
+
+        </td>
+        </tr>
+
+        <tr>
+            <tr style="width:50%">
+        <label class="clr" for="email">Email* </label> <br>
+        <input type="email" required> <br>
+
+        <label class="clr" for="password">Password*</label> <br>
+        <input type="password" required> <br>
+
+        <label class="clr" for="password"> Confirm password* </label> <br>
+        <input type="password" required> <br>
+
+        <label class="clr" for="gender"> Gender: </label> <br>
+        <input type="radio" id="gender" name="gender" value="Male">Male <br>
+        <input type="radio" id="gender" name="gender" value ="Female">Female <br> 
+
+        <input type="checkbox" id="hobby1" name="hobby1" value="Music">
+        <label class="clr" for="hobby1"> Music </label> <br>
+        <input type="checkbox" id="hobby2" name="hobby2" value="Sports">
+        <label class="clr" for="hobby2"> Sports </label> <br>
+        <input type="checkbox" id="hobby3" name="hobby3" value="Travel">
+        <label class="clr" for="hobby3"> Travel </label> <br>
+        <input type="checkbox" id="hobby4" name="hobby4" value="Movies">
+        <label class="clr" for="hobby4"> Movies </label> <br>
+
+        <label class="clr" for="incomeSource">Source of Income </label> <br>
+        <select id="incomeSource" name="incomeList" form="incomeForm">
+            <option value="Employed"> Employed </option>
+            <option value="relativeSupport"> Relative </option>
+        </select> <br>
+
+        <label class="clr" for="file">Upload Profile Picture</label> <br>
+        <input type="file" id="file" name="profilepic"> <br>
+
+        <label class="clr" for="age">Age </label> <br>
+        <input type="number"> <br>
+
+        <label class="clr" or="age"> Bio </label> <br>
+        <input type="text"> <br>
+    </form>
+</body>
+</html>

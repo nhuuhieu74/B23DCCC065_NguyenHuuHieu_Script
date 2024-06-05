@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="noReturn()"> Click here </button> <br>
+
+    <script>
+
+        function noReturn() {
+            document.write("This is a no return function");
+        }
+
+        function sum(a, b) {
+            return a+b;
+        }
+
+        function factorial(n) {
+
+            if (n < 0) {
+                return "number must be positive";
+            }
+
+            if (n == 0 || n == 1 ) {
+                return 1;
+            } else {
+                return n * factorial(n-1);
+            }
+        }
+
+        let sumResult = sum(10, 20);
+        document.write("Sum of 10 and 20 is " + sumResult + '<br>' );
+
+        
+        n =  parseInt(prompt('Enter a number'));
+        let result = factorial(n);
+        document.write("Factorial of " + n + " is " + result);
+
+
+
+    </script>
+</body>
+</html>

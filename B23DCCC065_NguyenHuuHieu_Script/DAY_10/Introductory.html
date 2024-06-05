@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <h1>Danh sách người dùng</h1>
+    <table id="usersTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Chu Kì Trấn</td>
+                <td>ckt@gmail.com</td>
+                <td>Action</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Chu Kì Trấn</td>
+                <td>ckt@gmail.com</td>
+                <td>Action</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button id="load-data">Load Data</button>
+    <script>
+        $(document).ready(function() { 
+            $('#load-data').click(function() {
+                $.ajax({
+                    url: "http://api.uduer.com/users",
+                    type: "GET",
+                    success: function(result) {
+                        var data = result.data.users;
+                        console.log(data);
+                        var tbody = $('#usersTable tbody');
+                        tbody.empty(); // Clear existing rows
+                        data.forEach(function(user) {
+                            tbody.append("<tr><td>" + user._id + "</td><td>" + user.name + "</td><td>" + user.email + "</td><td>Action</td></tr>");
+                        });
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

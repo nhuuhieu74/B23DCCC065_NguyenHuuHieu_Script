@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var firstArray = [1, 2, 3, 4, 5];
+        var secondArray = new Array(1, 5, 4 , 2, 4, 6,); //Alternative way of creating an array
+
+        alert(firstArray[4]); //print out an element via its index
+        alert(secondArray[2]);
+
+        alert(firstArray.length); //print out length of the array
+
+        document.write(secondArray.join('-')); //join function -> combine all elements into a string
+
+        console.log(firstArray.concat(secondArray)); //concat function -> join 2 arrays together
+
+        console.log(firstArray.slice(2,5)); //slice function -> delete an element from third element to sixth element in the example
+
+        console.log(secondArray.reverse()); //reverse function -> reverese elements's position
+
+        console.log(secondArray.sort()); //sort function -> sort the array incrementally 
+
+        firstArray.push(12, 18); /* push function -> add elements to the end of the list */ 
+        console.log(firstArray); 
+
+        secondArray.pop(); //pop function -> delete the last element in the array
+        console.log(secondArray);
+
+        firstArray.unshift(1,2); //unshift function ->  add elements at the beggining of the array
+        console.log(firstArray);
+
+        secondArray.shift(); //shift function -> delete the first element of the array
+        console.log(secondArray);
+        
+    </script>
+</body>
+</html>

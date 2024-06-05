@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var intArray = [1, 2, 4, 6, 5, 7, 10, 21, 25];
+
+        function maxNumber(arr) {
+            let max = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+
+            return max;
+        }
+
+        function squareNumber(num) {
+            return num > 0 && Math.sqrt(num) % 1 == 0;
+        }
+
+        function findSquareNumber(arr) {
+            return arr.filter(num => squareNumber(num));
+        }
+
+        function findAverage(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum / arr.length;
+        }
+
+        function findNumberBiggerThanAverage(arr) {
+            const avg = findAverage(arr);
+            return arr.filter(number => number > avg); 
+        }
+
+        console.log("Số nguyên lớn nhất của mảng: ", maxNumber(intArray));
+        console.log("Số chính phương của mảng: ", findSquareNumber(intArray));
+        console.log("Các số lớn hơn trung bình cộng của mảng: ", findNumberBiggerThanAverage(intArray));
+        console.log("Trung bình cộng của mảng: ", findAverage(intArray)); 
+    </script>
+</body>
+</html>
+
